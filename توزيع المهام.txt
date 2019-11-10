@@ -1,0 +1,12 @@
+﻿بدر:
+main.php
+about.html
+
+فهد:
+getpass.php
+detail.php
+index.php
+
+عبدالمجيد:
+signin.php
+bill.php
