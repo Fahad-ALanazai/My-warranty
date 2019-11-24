@@ -16,7 +16,7 @@
                 <a class="nav-link" href="contact.php">تواصل معنا</a>
             </li>
             <li>
-                <a class="nav-link" href="about.html">من نحن</a>
+                <a class="nav-link" href="about.php">من نحن</a>
             </li>
             <?php
             if(isset($_SESSION["U_id"])) {

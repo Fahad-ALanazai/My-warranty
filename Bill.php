@@ -73,7 +73,7 @@ if(!isset($_SESSION["U_id"])){
     </style>
 </head>
 <?php include "nav.php";?>
-    
+    <body>
     <br><br>
  <form dir="rtl" method="post" enctype="multipart/form-data">
      <ul>
@@ -120,5 +120,6 @@ if(!isset($_SESSION["U_id"])){
          <button name="save" value="save">حـفظ</button>
      </ul>
     </form>
+    
 </body>
 </html>
