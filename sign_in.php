@@ -74,6 +74,9 @@ if(isset($_POST["singin"])){
         <button style="width: 350px;margin: auto" class="btn btn-lg btn-primary btn-block" type="submit" name="singin">Sign in</button>
 <br>
         <label><a href="forget.php">هل نسيت كلمة المرور؟</a></label>
+        <br>
+        <br>
+        <label><a href="register.php"> لاتملك حساب اضغط هنا </a></label>
 
     </form>
 
