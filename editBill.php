@@ -51,91 +51,98 @@ if(!isset($_SESSION["U_id"])){
 
         ?>
 
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>
-                تعديل فاتورة
-            </title>
+<!DOCTYPE html>
+<html>
 
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="description" content="">
-            <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-            <meta name="generator" content="Jekyll v3.8.5">
+<head>
+    <title>
+        تعديل فاتورة
+    </title>
 
-            <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
-            <link rel="stylesheet" href="bootstrap-rtl.min.css">
-            <link rel="stylesheet" href="bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
 
-            <!-- Bootstrap core CSS -->
-            <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
-                  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                  crossorigin="anonymous">
-            <!-- Custom styles for this template -->
-            <link href="signin.css" rel="stylesheet">
-            <link href="navbar.css" rel="stylesheet">
-            <style>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+    <link rel="stylesheet" href="bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
 
-                form {
-                    text-align: right
-                }
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <style>
+        form {
+            text-align: right
+        }
 
-                input {
-                    text-align: center
-
-                }
-            </style>
-        </head>
-        <?php include "nav.php";?>
-
-        <br><br>
-        <form dir="rtl" method="post" enctype="multipart/form-data">
-            <ul>
-                اسم الفاتوره:
-                <input type="text" name="name" id="name" required value="<?=$row['Bill_name'];?>">
-                <br>
-                <br>
+        input {
+            text-align: center
+        }
 
 
-                تاريخ الفاتوره:
-                <input type="date" name="date" id="date" required value="<?=$row['Bill_date'];?>">
-                <br>
+        body {
+            background-image: url(background.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
 
-                <br>
+    </style>
+</head>
+<?php include "nav.php";?>
 
-
-                مدة الضمان:
-                <input type="date" name="time" id="time" required value="<?=$row['Warrnty_period'];?>">
-                <br>
-
-
-                <br>
-
-
-                الشركة المصنعه:
-                <input type="text" name="comp" id="comp" required value="<?=$row['Company'];?>" >
-                <br>
-                <br>
-
-                موقع الشراء
-                <input type="text" name="loc" id="loc" required value="<?=$row['Warranty_loc'];?>">
-                <br>
-                <br>
+<br><br>
+<form dir="rtl" method="post" enctype="multipart/form-data">
+    <ul>
+        اسم الفاتوره:
+        <input type="text" name="name" id="name" required value="<?=$row['Bill_name'];?>">
+        <br>
+        <br>
 
 
-                صورة الفاتورة:
+        تاريخ الفاتوره:
+        <input type="date" name="date" id="date" required value="<?=$row['Bill_date'];?>">
+        <br>
 
-                <input type="file" name="fileToUpload">
-                <br>
-                <br>
+        <br>
 
-                <button name="update" value="update">تحديث</button>
-            </ul>
-        </form>
-        </body>
-        </html>
-        <?php
+
+        مدة الضمان:
+        <input type="date" name="time" id="time" required value="<?=$row['Warrnty_period'];?>">
+        <br>
+
+
+        <br>
+
+
+        الشركة المصنعه:
+        <input type="text" name="comp" id="comp" required value="<?=$row['Company'];?>">
+        <br>
+        <br>
+
+        موقع الشراء
+        <input type="text" name="loc" id="loc" required value="<?=$row['Warranty_loc'];?>">
+        <br>
+        <br>
+
+
+        صورة الفاتورة:
+
+        <input type="file" name="fileToUpload">
+        <br>
+        <br>
+
+        <button name="update" value="update">تحديث</button>
+    </ul>
+</form>
+</body>
+
+</html>
+<?php
     }
 }
     ?>

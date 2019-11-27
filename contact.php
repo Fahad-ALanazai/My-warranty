@@ -37,21 +37,32 @@ if(isset($_POST["contact"])){
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
     <link href="navbar.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(background.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+    </style>
+
 </head>
 
 <body class="text-center" dir="rtl">
-<?php include "nav.php";?>
+    <?php include "nav.php";?>
 
     <?php if(count($alert) > 0){?>
-        <div class="alert alert-success">
-            <?=$alert[0]?>
-        </div>
+    <div class="alert alert-success">
+        <?=$alert[0]?>
+    </div>
     <?php } ?>
 
     <?php if(count($errors) > 0){?>
-        <div class="alert alert-danger">
-            <?=$errors[0]?>
-        </div>
+    <div class="alert alert-danger">
+        <?=$errors[0]?>
+    </div>
     <?php } ?>
 
     <form class="form-signin" method="post">
@@ -67,7 +78,7 @@ if(isset($_POST["contact"])){
         <textarea style="width: 350px;margin: auto" name="inputMessage" id="inputMessage" class="form-control" placeholder="الرسالة" required=""></textarea>
         <br>
         <button style="width: 350px;margin: auto" class="btn btn-lg btn-primary btn-block" type="submit" name="contact">تواصل</button>
-<br>
+        <br>
 
     </form>
 

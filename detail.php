@@ -30,13 +30,20 @@ if(empty($_GET["bill"]) OR $row == false){
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
-<style>
-    td,
-    table {
-        border: solid;
-    }
+    <style>
+        td,
+        table {
+            border: solid;
+        }
 
-</style>
+        body {
+            background-image: url(background.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+    </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -82,11 +89,11 @@ if(empty($_GET["bill"]) OR $row == false){
         </div>
 
     </nav>
-    
-    
-    
-    
-   <h2>تفاصيل الفواتير</h2>
+
+
+
+
+    <h2>تفاصيل الفواتير</h2>
 
     <table style="width:100%">
         <input type="hidden" name="B_id" value="<?=$row['B_id']?>">
@@ -127,19 +134,19 @@ if(empty($_GET["bill"]) OR $row == false){
         <div class="d-inline-block">
             <button name="del" class="btn btn-danger">حذف</button>&nbsp;&nbsp
             <a href="editBill.php?bill=<?=$row['B_id']?>" class="btn btn-primary">
-                    تعديل
+                تعديل
             </a>&nbsp;&nbsp;
             <button onclick="window.print()" class="btn btn-info">طباعه</button>&nbsp;&nbsp;&nbsp;
 
 
             <a href="https://www.google.com.sa/maps/search/<?=$row['Warranty_loc']?>" class="btn btn-secondary">
-                 خريطه
+                خريطه
             </a>
         </div>
     </form>
 </body>
 
 </html>
-    <?php
+<?php
 }
 ?>
