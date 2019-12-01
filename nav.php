@@ -6,11 +6,8 @@
     </button>
     <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">ضماناتي</a>
-            </li>
             <li>
-                <a class="nav-link active" href="main.php">الصفحة الرئيسية</a>
+                <a class="nav-link active" href="main.php">قائمة الفواتير</a>
             </li>
             <li>
                 <a class="nav-link" href="contact.php">تواصل معنا</a>
@@ -27,7 +24,16 @@
                 <li>
                     <a class="nav-link active" href="logout.php">تسجيل الخروج</a>
                 </li>
+            
                 <?php
+                
+            }
+            else {
+                ?>
+             <li class="nav-item active">
+                <a class="nav-link" href="index.html">ضماناتي</a>
+            </li>
+            <?php
             }
             ?>
         </ul>

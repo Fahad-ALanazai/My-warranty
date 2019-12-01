@@ -36,12 +36,7 @@ if(empty($_GET["bill"]) OR $row == false){
             border: solid;
         }
 
-        body {
-            background-image: url(background.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
+
 
     </style>
 
@@ -60,38 +55,12 @@ if(empty($_GET["bill"]) OR $row == false){
     <link href="navbar.css" rel="stylesheet">
 </head>
 
-<body dir="rtl">
+<body class="rtl">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="first.html">ضماناتي</a>
-                </li>
-                <li>
-                    <a class="nav-link active" href="main.php">الصفحة الرئيسية</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="contact.html">تواصل معنا</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="about.html">من نحن</a>
-                </li>
-                <li>
-                    <a class="nav-link active" href="Bill.html">اضافة فاتورة</a>
-                </li>
-
-            </ul>
-        </div>
-
-    </nav>
+<?php include "nav.php";?>
 
 
-
+<div class="w3-container">
 
     <h2>تفاصيل الفواتير</h2>
 
@@ -132,7 +101,7 @@ if(empty($_GET["bill"]) OR $row == false){
     <br><br>
     <form action="" method="post">
         <div class="d-inline-block">
-            <button name="del" class="btn btn-danger">حذف</button>&nbsp;&nbsp
+            <button name="del" class="btn btn-danger">حذف</button>&nbsp;
             <a href="editBill.php?bill=<?=$row['B_id']?>" class="btn btn-primary">
                 تعديل
             </a>&nbsp;&nbsp;
@@ -144,6 +113,9 @@ if(empty($_GET["bill"]) OR $row == false){
             </a>
         </div>
     </form>
+    
+    </div>
+    
 </body>
 
 </html>

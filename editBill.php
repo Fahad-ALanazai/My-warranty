@@ -84,17 +84,11 @@ if(!isset($_SESSION["U_id"])){
         }
 
 
-        body {
-            background-image: url(background.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
 
     </style>
 </head>
 <?php include "nav.php";?>
-
+<body>
 <br><br>
 <form dir="rtl" method="post" enctype="multipart/form-data">
     <ul>

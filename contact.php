@@ -38,15 +38,7 @@ if(isset($_POST["contact"])){
     <link href="signin.css" rel="stylesheet">
     <link href="navbar.css" rel="stylesheet">
 
-    <style>
-        body {
-            background-image: url(background.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
 
-    </style>
 
 </head>
 
