@@ -4,7 +4,8 @@ include "conn.php";
 $errors = array();
 
 if(isset($_POST["singin"])){
-    $result = mysqli_query($conn,"SELECT * FROM users WHERE Email = '$_POST[inputEmail]' AND Password = '$_POST[inputPassword]'");
+    $password = md5($_POST['inputPassword']);
+    $result = mysqli_query($conn,"SELECT * FROM users WHERE Email = '$_POST[inputEmail]' AND Password = '$password'");
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
             $_SESSION['U_id'] = $row['U_id'];
@@ -37,24 +38,12 @@ if(isset($_POST["singin"])){
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
     <link href="navbar.css" rel="stylesheet">
-
-    <style>
-        body {
-            background-image: url(background.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-    </style>
-
-
 </head>
 
 <body class="text-center" dir="rtl">
-    <?php include "nav.php";?>
+<?php include "nav.php";?>
 
-    <?php if(count($errors) > 0){?>
+<?php if(count($errors) > 0){?>
     <div class="alert alert-danger">
         <ul>
             <?php
@@ -84,11 +73,8 @@ if(isset($_POST["singin"])){
         <input style="width: 350px;margin: auto" name="inputPassword" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <br>
         <button style="width: 350px;margin: auto" class="btn btn-lg btn-primary btn-block" type="submit" name="singin">Sign in</button>
-        <br>
+<br>
         <label><a href="forget.php">هل نسيت كلمة المرور؟</a></label>
-        <br>
-        <br>
-        <label><a href="register.php"> لاتملك حساب اضغط هنا </a></label>
 
     </form>
 

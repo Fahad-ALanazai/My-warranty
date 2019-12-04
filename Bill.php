@@ -51,13 +51,12 @@ if(!isset($_SESSION["U_id"])){
 
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>
-        إضافة فاتورة
+        <title>
+    إضافة فاتورة
     </title>
 
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -74,115 +73,107 @@ if(!isset($_SESSION["U_id"])){
     <link href="navbar.css" rel="stylesheet">
 
     <script>
-        function myMap() {
-            var center = new google.maps.LatLng(26.344567582855507, 43.950184727508486);
-            var mapProp = {
-                center: center,
-                zoom: 17,
-                mapTypeId: 'satellite'
-            };
+    function myMap() {
+        var center = new google.maps.LatLng(26.344567582855507, 43.950184727508486);
+        var mapProp= {
+        center:center,
+        zoom:17,
+        mapTypeId: 'satellite'
+        };
 
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            var image = 'img/marker.png';
-            var marker = new google.maps.Marker({
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var image = 'img/marker.png';
+        var marker = new google.maps.Marker({
                 position: center,
-                animation: google.maps.Animation.BOUNCE,
+                animation:google.maps.Animation.BOUNCE,
             });
-            marker.setMap(map);
-            google.maps.event.addListener(map, 'click', function(event) {
-                marker.setPosition(event.latLng);
-                document.getElementById("loc").value = event.latLng;
-            });
-        }
+        marker.setMap(map);
+        google.maps.event.addListener(map,'click',function(event) {
+        marker.setPosition(event.latLng);
+        document.getElementById("loc").value = event.latLng;
+        });
+    }
 
     </script>
 
     <style>
-        form {
+    
+        form{
             text-align: right
         }
-
         input {
             text-align: center
+                
         }
-
-        body {
-            background-image: url(background.jpeg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
     </style>
 </head>
 <?php include "nav.php";?>
-
-<body>
-
-
     <div class="container">
-        <br><br>
-        <form dir="rtl" method="post" enctype="multipart/form-data">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="name">اسم الفاتوره:</label>
-                    <input type="text" class="form-control" name="name" id="name" required>
+    <br><br>
+ <form dir="rtl" method="post" enctype="multipart/form-data">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="name">اسم الفاتوره:</label>
+            <input type="text" class="form-control" name="name" id="name" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="date">تاريخ الفاتوره:</label>
+            <input type="date" class="form-control" name="date" id="date" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="time">مدة الضمان:</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="custom-select mr-sm-0" name="time" id="time">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="date">تاريخ الفاتوره:</label>
-                    <input type="date" class="form-control" name="date" id="date" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="time">مدة الضمان:</label>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <select class="custom-select mr-sm-0" name="time" id="time">
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4">
-                            <select class="custom-select mr-sm-0" name="time_type" id="time_type">
-                                <option value="month" selected>شهر</option>
-                                <option value="year">سنة</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="comp">الشركة المصنعه:</label>
-                    <input type="text" class="form-control" name="comp" id="comp" required>
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label for="file">صورة الفاتورة:</label>
-                    <input type="file" class="form-control-file" name="fileToUpload" required>
+                <div class="col-md-4">
+                    <select class="custom-select mr-sm-0" name="time_type" id="time_type">
+                        <option value="month" selected>شهر</option>
+                        <option value="year">سنة</option>
+                    </select>
                 </div>
             </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="comp">الشركة المصنعه:</label>
+            <input type="text" class="form-control" name="comp" id="comp" required>
+        </div>
 
-            <div class="form-row form-group">
-                <label for="loc">موقع الشراء</label>
-                <input type="hidden" name="loc" id="loc" value="(26.344567582855507, 43.950184727508486)">
-                <div id="googleMap" style="width:100%; height: 400px;"></div>
-            </div>
+        <div class="form-group col-md-4">
+            <label for="file">صورة الفاتورة:</label>
+            <input type="file" class="form-control-file" name="fileToUpload" required>
+        </div>
+    </div>
 
-            <button name="save" class="btn btn-primary" value="save">حـفظ</button>
-        </form>
+    <div class="form-row form-group">
+        <label for="loc">موقع الشراء</label>
+        <input type="hidden" name="loc" id="loc" value="(26.344567582855507, 43.950184727508486)">
+        <div id="googleMap" style="width:100%; height: 400px;"></div>
+    </div>
+    
+         <button name="save" class="btn btn-primary" value="save">حـفظ</button>
 
     </div>
+    </form>
+    </div>
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <script>
+    document.getElementById('date').valueAsDate = new Date();
+    </script>
 </body>
-
 </html>

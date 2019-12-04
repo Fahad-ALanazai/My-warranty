@@ -4,8 +4,8 @@ include "conn.php";
 $errors = array();
 
 if(isset($_POST["register"])){
-
-    $sql = "INSERT INTO users(U_name,U_phone,Email,Password) VALUES('$_POST[inputName]','$_POST[inputPhone]','$_POST[inputEmail]','$_POST[inputPassword]')";
+    $password = md5($_POST['inputPassword']);
+    $sql = "INSERT INTO users(U_name,U_phone,Email,Password) VALUES('$_POST[inputName]','$_POST[inputPhone]','$_POST[inputEmail]','$password')";
 
     if(mysqli_query($conn,$sql)){
     $last_id = mysqli_insert_id($conn);
