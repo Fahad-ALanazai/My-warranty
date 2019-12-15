@@ -108,6 +108,7 @@ if(!isset($_SESSION["U_id"])){
     </style>
 </head>
 <?php include "nav.php";?>
+    <body>
     <div class="container">
     <br><br>
  <form dir="rtl" method="post" enctype="multipart/form-data">
@@ -167,10 +168,9 @@ if(!isset($_SESSION["U_id"])){
     </div>
     
          <button name="save" class="btn btn-primary" value="save">حـفظ</button>
-
+        </form>
     </div>
-    </form>
-    </div>
+    
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     <script>
     document.getElementById('date').valueAsDate = new Date();
